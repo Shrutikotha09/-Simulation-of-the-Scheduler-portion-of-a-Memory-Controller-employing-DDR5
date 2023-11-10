@@ -41,7 +41,7 @@ initial
 begin 
 	if (!$value$plusargs("filename=%s", filename)) 
 	begin
-		filename = "trace.txt";
+	filename = "trace.txt";
 	end
 
 	if ($value$plusargs("debug=%d", debug)) 
