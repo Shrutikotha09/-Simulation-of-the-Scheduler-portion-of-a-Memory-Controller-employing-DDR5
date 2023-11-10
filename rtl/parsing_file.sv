@@ -17,7 +17,6 @@ task read_file(string name);
   if(debug)
     $display("readline : %s", line);
   end
-  end
    $fclose(file);
 endtask
 
