@@ -9,7 +9,7 @@ task read_file(string name);
 		logic [31:0] time_CPU_clock_cycles;
 		logic [3:0] core;
 		logic [1:0] operation;
-		logic [31:0] address;
+		logic [34:0] address;
 		} input_data;
 	input_data i;
   
@@ -22,18 +22,16 @@ task read_file(string name);
 
   	while(!$feof(file)) 
 		begin 
-   		void'($fgets(line,file));
-    
-  	if(debug) 
-		begin
-		$sscanf (line, "%0d %0d %0d %h", i.time_CPU_clock_cycles, i.core, i.operation, i.address);
-        	$display("CPU_clock_cycles= %0d Core=%0d operation=%0d address=%h", i.time_CPU_clock_cycles, i.core, i.operation, i.address);       
-        	file1=$fopen("output.txt","a");
-        	//$fdisplay(file1, "readline : %s", line);
+   		//void'($fgets(line,file));
+		$fscanf (file, "%0d %0d %0d %h", i.time_CPU_clock_cycles, i.core, i.operation, i.address);
+		if(debug) 
+		begin        	
+		$display("CPU_clock_cycles= %0d Core=%0d operation=%0d address=%h", i.time_CPU_clock_cycles, i.core, i.operation, i.address);       
+		end        	
+		file1=$fopen("output.txt","a");
 		$fwrite(file1, "CPU_clock_cycles= %0d Core=%0d operation=%0d address=%h\n", i.time_CPU_clock_cycles, i.core, i.operation, i.address);   
-        	//$display("readline : %s", line);
-  		end
-	end
+        	
+end
 $fclose(file);
 endtask
 
