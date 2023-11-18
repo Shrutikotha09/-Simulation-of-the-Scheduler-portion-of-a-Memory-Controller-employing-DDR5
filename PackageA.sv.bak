@@ -25,7 +25,7 @@ typedef struct packed {
 in_data queue_in [15:0];
 
 
-
+// Task for address mappijng
 task automatic address_mapping (input bit [33:0]address, 
 				output add_map add_mapped);
 

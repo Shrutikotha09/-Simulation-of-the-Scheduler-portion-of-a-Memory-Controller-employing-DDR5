@@ -1,0 +1,35 @@
+# Compile of PackageA.sv was successful.
+# Compile of test.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vopt +acc tb -o tb_opt
+# QuestaSim-64 vopt 2023.3 Compiler 2023.07 Jul 17 2023
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Start time: 15:46:15 on Nov 18,2023
+# vopt -reportprogress 300 "+acc" tb -o tb_opt 
+# 
+# Top level modules:
+# 	tb
+# 
+# Analyzing design...
+# -- Loading module tb
+# Incremental compilation check found no design-units (out of 3) may be reused.
+# Optimizing 3 design-units (inlining 0/1 module instances):
+# -- Optimizing package PackageA(fast)
+# -- Optimizing package PackageA_sv_unit(fast)
+# -- Optimizing module tb(fast)
+# Optimized design name is tb_opt
+# End time: 15:46:16 on Nov 18,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1
+vsim tb_opt
+# vsim tb_opt 
+# Start time: 15:46:36 on Nov 18,2023
+# Loading sv_std.std
+# Loading work.PackageA(fast)
+# Loading work.PackageA_sv_unit(fast)
+# Loading work.tb(fast)
+run
+# Before calling the task... address 0000010010001101000101011001111000, add_map '{row:0, col_high:0, bank:0, bank_group:0, channel:0, col_low:0, byte_sel:0}
+# After calling the task... address 0000010010001101000101011001111000, add_map '{row:1165, col_high:5, bank:1, bank_group:4, channel:1, col_low:14, byte_sel:0}
+quit -sim
+# End time: 15:46:57 on Nov 18,2023, Elapsed time: 0:00:21
+# Errors: 0, Warnings: 2

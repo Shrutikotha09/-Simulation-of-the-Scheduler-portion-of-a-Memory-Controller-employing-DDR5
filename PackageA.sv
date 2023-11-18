@@ -20,10 +20,17 @@ typedef struct packed {
 		bit [3:0] core;
 		bit [1:0] operation;
 		bit [33:0] address;
-		add_map add_mapped;
-		} in_data;
-in_data queue_in [15:0];
+		} input_data;
 
+input_data in_data;
+
+// Queue Data type
+typedef struct packed {
+		input_data in_data;
+		add_map add_mapped;		
+		} queue_str;
+
+queue_str queue_in [15:0];
 
 // Task for address mappijng
 task automatic address_mapping (input bit [33:0]address, 

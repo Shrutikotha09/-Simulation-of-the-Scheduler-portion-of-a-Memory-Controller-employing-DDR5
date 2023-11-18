@@ -5,6 +5,7 @@ Z0 !s99 nomlopt
 R0
 R0
 R0
+R0
 !s11f vlog 2023.3 2023.07, Jul 17 2023
 13
 !s112 1.1
@@ -16,26 +17,26 @@ dN:/ASIC/work
 vDRAM_Commands
 Z1 2N:/MSD_Final_Project/PackageA.sv
 Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z3 DXx4 work 8 PackageA 0 22 CnUkOzP_CfGmUC;5X1GM52
-Z4 DXx4 work 16 PackageA_sv_unit 0 22 9n>I]lQIP?:WdES_0H:520
-Z5 !s110 1700339510
+Z3 DXx4 work 8 PackageA 0 22 QzWnJNm`gKz3idJH1^AKa1
+Z4 DXx4 work 16 PackageA_sv_unit 0 22 U2W9LVIH::6_h8VV@<OW53
+Z5 !s110 1700351156
 Z6 VDg1SIo80bB@j0V0VzS_@n1
 r1
 !s85 0
 !i10b 1
-!s100 WDa9_EgjoPOAT=bbRzW>50
-I9Hh^W]^Ae_AER;INNiJ8:0
+!s100 dNAPGQK8hPbi:zjU3Rz2G2
+I^XR1KolBmQaZ>eOS4jXnC0
 Z7 !s105 PackageA_sv_unit
 S1
 Z8 dN:/MSD_Final_Project
-Z9 w1700339506
+Z9 w1700351145
 Z10 8N:/MSD_Final_Project/PackageA.sv
 Z11 FN:/MSD_Final_Project/PackageA.sv
-!i122 10
-L0 37 15
+!i122 11
+L0 47 15
 Z12 OL;L;2023.3;77
 31
-Z13 !s108 1700339510.000000
+Z13 !s108 1700351155.000000
 Z14 !s107 N:/MSD_Final_Project/PackageA.sv|
 Z15 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|N:/MSD_Final_Project/PackageA.sv|
 !i113 0
@@ -45,7 +46,7 @@ n@d@r@a@m_@commands
 vfile_read
 2N:/MSD_Final_Project/test.sv
 R2
-!s110 1700338426
+R5
 !i10b 1
 !s100 Q?AOgz@Wc2]FCc8IaQlnh2
 IAf3A=2WdUCDZ5>@Yaz[6M1
@@ -54,14 +55,14 @@ R8
 w1700338128
 8N:/MSD_Final_Project/test.sv
 FN:/MSD_Final_Project/test.sv
-!i122 5
+!i122 12
 L0 1 55
 R6
 R12
 r1
 !s85 0
 31
-!s108 1700338425.000000
+!s108 1700351156.000000
 !s107 N:/MSD_Final_Project/test.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|N:/MSD_Final_Project/test.sv|
 !i113 0
@@ -72,16 +73,16 @@ R1
 R2
 R5
 !i10b 1
-!s100 Y;3hRmmRF1_6L1oO;OzUn2
-ICnUkOzP_CfGmUC;5X1GM52
+!s100 SC^S6Y`CLUG=ZCd5@6GYm1
+IQzWnJNm`gKz3idJH1^AKa1
 S1
 R8
 R9
 R10
 R11
-!i122 10
+!i122 11
 L0 1 0
-VCnUkOzP_CfGmUC;5X1GM52
+VQzWnJNm`gKz3idJH1^AKa1
 R12
 r1
 !s85 0
@@ -98,20 +99,20 @@ R1
 R2
 R3
 R5
-V9n>I]lQIP?:WdES_0H:520
+VU2W9LVIH::6_h8VV@<OW53
 r1
 !s85 0
 !i10b 1
-!s100 `W?;X:IBg^?VY><<WUMP72
-I9n>I]lQIP?:WdES_0H:520
+!s100 SFTbVR>KEJj]aKQjBAZUD1
+IU2W9LVIH::6_h8VV@<OW53
 !i103 1
 S1
 R8
 R9
 R10
 R11
-!i122 10
-L0 36 0
+!i122 11
+L0 46 0
 R12
 31
 R13
@@ -131,16 +132,16 @@ R6
 r1
 !s85 0
 !i10b 1
-!s100 :8H^C8J7OSkZ5WBYj5L=<0
-ISAlQgI;Y8KCaA7JR;oZ6?2
+!s100 <;YLTa]<NDSi^ia=_YgDD1
+Idcg2S250j^zhT>f16E_D>2
 R7
 S1
 R8
 R9
 R10
 R11
-!i122 10
-L0 54 15
+!i122 11
+L0 64 15
 R12
 31
 R13
@@ -150,8 +151,8 @@ R15
 R16
 R17
 Ttb_opt
-!s110 1700339520
-VWRBBomSzO3:>n[U[i;L`S0
+!s110 1700351176
+VNd4M5D;?i1RTlR16]DbKm0
 04 2 4 work tb fast 0
 R0
 !s12b OEM100
