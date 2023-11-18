@@ -1,0 +1,8 @@
+N:/MSD_Final_Project/test.sv {1 {vlog -work work -vopt -sv -stats=none N:/MSD_Final_Project/test.sv
+QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+-- Compiling module file_read
+
+Top level modules:
+	file_read
+
+} {} {}}
