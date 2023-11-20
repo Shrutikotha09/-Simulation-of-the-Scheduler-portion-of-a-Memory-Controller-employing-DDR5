@@ -1,0 +1,4 @@
+CPU_clock_cycles= xCPU_clock_cycles= xCPU_clock_cycles= xCurrent command 000Current command 001Current command ACT0Current command ACT1Current command WR0Current command ACT0 
+Current command ACT1 
+Current command RD0 
+Current command RD1 

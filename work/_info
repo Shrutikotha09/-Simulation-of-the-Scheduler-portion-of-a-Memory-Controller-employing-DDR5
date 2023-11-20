@@ -6,6 +6,22 @@ R0
 R0
 R0
 R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
 !s11f vlog 2023.3 2023.07, Jul 17 2023
 13
 !s112 1.1
@@ -13,52 +29,64 @@ R0
 !i10e 25
 !i10f 100
 cModel Technology
-dN:/ASIC/work
+Z1 dN:/ASIC/work
 vDRAM_Commands
-Z1 2N:/MSD_Final_Project/PackageA.sv
-Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z3 DXx4 work 8 PackageA 0 22 QzWnJNm`gKz3idJH1^AKa1
-Z4 DXx4 work 16 PackageA_sv_unit 0 22 U2W9LVIH::6_h8VV@<OW53
-Z5 !s110 1700351156
-Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z2 2N:/MSD_Final_Project/PackageA.sv
+Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z4 DXx4 work 8 PackageA 0 22 HZlaj3m3SDomajD]clkDh0
+Z5 DXx4 work 16 PackageA_sv_unit 0 22 iI6RNVN1kg9G<oXN7INd80
+Z6 !s110 1700444103
+Z7 VDg1SIo80bB@j0V0VzS_@n1
 r1
 !s85 0
 !i10b 1
-!s100 dNAPGQK8hPbi:zjU3Rz2G2
-I^XR1KolBmQaZ>eOS4jXnC0
-Z7 !s105 PackageA_sv_unit
+!s100 JUDjIL1G^LSbW7gfR839k0
+I=Ph_W^`^d5T5`J=B=3nSb0
+Z8 !s105 PackageA_sv_unit
 S1
-Z8 dN:/MSD_Final_Project
-Z9 w1700351145
-Z10 8N:/MSD_Final_Project/PackageA.sv
-Z11 FN:/MSD_Final_Project/PackageA.sv
-!i122 11
-L0 47 15
-Z12 OL;L;2023.3;77
+Z9 dN:/MSD_Final_Project
+Z10 w1700444099
+Z11 8N:/MSD_Final_Project/PackageA.sv
+Z12 FN:/MSD_Final_Project/PackageA.sv
+!i122 46
+L0 90 46
+Z13 OL;L;2023.3;77
 31
-Z13 !s108 1700351155.000000
-Z14 !s107 N:/MSD_Final_Project/PackageA.sv|
+Z14 !s108 1700444102.000000
+!s107 N:/MSD_Final_Project/PackageA.sv|
 Z15 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|N:/MSD_Final_Project/PackageA.sv|
 !i113 0
 Z16 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 Z17 tCvgOpt 0
 n@d@r@a@m_@commands
+TDRAM_Commands_opt
+!s110 1700380041
+VnFBe7a:3I]AI32L:I1QIM3
+04 13 4 work DRAM_Commands fast 0
+R0
+Z18 !s12b OEM100
+Z19 !s124 OEM100
+Z20 o+acc
+R17
+n@d@r@a@m_@commands_opt
+Z21 OL;O;2023.3;77
+R1
 vfile_read
 2N:/MSD_Final_Project/test.sv
-R2
-R5
+R3
+!s110 1700351156
 !i10b 1
 !s100 Q?AOgz@Wc2]FCc8IaQlnh2
 IAf3A=2WdUCDZ5>@Yaz[6M1
 S1
-R8
+R9
 w1700338128
 8N:/MSD_Final_Project/test.sv
 FN:/MSD_Final_Project/test.sv
 !i122 12
 L0 1 55
-R6
-R12
+R7
+R13
 r1
 !s85 0
 31
@@ -69,95 +97,96 @@ r1
 R16
 R17
 XPackageA
-R1
 R2
-R5
+R3
+R6
 !i10b 1
-!s100 SC^S6Y`CLUG=ZCd5@6GYm1
-IQzWnJNm`gKz3idJH1^AKa1
+!s100 8aTQ^8_7DSjJ3BV8bUS]c2
+IHZlaj3m3SDomajD]clkDh0
 S1
-R8
 R9
 R10
 R11
-!i122 11
-L0 1 0
-VQzWnJNm`gKz3idJH1^AKa1
 R12
+!i122 46
+L0 1 0
+VHZlaj3m3SDomajD]clkDh0
+R13
 r1
 !s85 0
 31
-R13
 R14
+Z22 !s107 N:/MSD_Final_Project/PackageA.sv|
 R15
 !i113 0
 R16
 R17
 n@package@a
 XPackageA_sv_unit
-R1
 R2
 R3
-R5
-VU2W9LVIH::6_h8VV@<OW53
+R4
+R6
+ViI6RNVN1kg9G<oXN7INd80
 r1
 !s85 0
 !i10b 1
-!s100 SFTbVR>KEJj]aKQjBAZUD1
-IU2W9LVIH::6_h8VV@<OW53
+!s100 1<[P5m0De56[=1hgZ5NLf2
+IiI6RNVN1kg9G<oXN7INd80
 !i103 1
 S1
-R8
 R9
 R10
 R11
-!i122 11
-L0 46 0
 R12
-31
+!i122 46
+L0 89 0
 R13
+31
 R14
+R22
 R15
 !i113 0
 R16
 R17
 n@package@a_sv_unit
 vtb
-R1
 R2
 R3
 R4
 R5
 R6
+R7
 r1
 !s85 0
 !i10b 1
-!s100 <;YLTa]<NDSi^ia=_YgDD1
-Idcg2S250j^zhT>f16E_D>2
-R7
-S1
+!s100 n_URcMlP[Ya601SFUTZ?V0
+IHfWD1gJliY`>mCU`hl>R62
 R8
+S1
 R9
 R10
 R11
-!i122 11
-L0 64 15
 R12
-31
+!i122 46
+L0 138 12
 R13
+31
 R14
+R22
 R15
 !i113 0
 R16
 R17
 Ttb_opt
-!s110 1700351176
-VNd4M5D;?i1RTlR16]DbKm0
+!s110 1700355494
+VMBV`_l>oGAhAl?=7=ZRgW3
 04 2 4 work tb fast 0
 R0
-!s12b OEM100
-!s124 OEM100
-o+acc
+R18
+R19
+R20
 R17
 ntb_opt
-OL;O;2023.3;77
+R21
+R1
