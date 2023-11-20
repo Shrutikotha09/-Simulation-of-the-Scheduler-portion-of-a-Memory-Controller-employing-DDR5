@@ -1,6 +1,7 @@
 
 import Declarations1::*;
 import Definitions1::*;
+import PackageA::*;
 
 module DRAM_Commands;
 
@@ -21,20 +22,36 @@ end
 initial
 begin : initial_blk
 
-queue_row = queue_in[0];
-$display(" queue_row %p", queue_row );
 while (!done)
 begin : while_done
+
+queue_row = queue_in[0];
+$display(" queue_row %p", queue_row );
 
 if(!(clock%2))
 begin : DIMM_clk
 $display(" DIMM Clock");
 
+// code added for checkpoint
+while(1)
+begin
+next_command (queue_row.curr_cmd, queue_row.in_data.operation, queue_row.row_col);
+out_file_upd(queue_row, clock);
+if(queue_row.curr_cmd == PRE) begin
+remove_from_queue ();
+$display("Queue data %p", queue_in[0]);
+$display("Queue data %p", queue_in[1]);
+break;
+end
+end
+//End of CP code 
+
+/*
 next_command (queue_row.curr_cmd, queue_row.in_data.operation, queue_row.row_col);
 $display(" next command %b", queue_row .curr_cmd);
 $display(" Upload output file clock %b", clock);
 out_file_upd(queue_row, clock);
-//end : initial_cmd
+*/
 
 end : DIMM_clk
 
@@ -43,16 +60,17 @@ begin : else_DIMM_clock
 $display("else  DIMM Clock");
 end : else_DIMM_clock
 
-if(queue_row.curr_cmd == PRE)
-remove_from_queue ();
+//if(queue_row.curr_cmd == PRE)
+//remove_from_queue ();
 
 clock++;
 
-/* Add code for setting done
-if()
+// Add code for setting done to exit loop
+if(queue_in.empty() && $feof(file))
 begin : set_done
+done = 1;
 end : set_done
-*/
+//
 end : while_done
 
 end : initial_blk
