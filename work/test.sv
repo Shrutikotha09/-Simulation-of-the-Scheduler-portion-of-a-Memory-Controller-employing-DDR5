@@ -1,0 +1,64 @@
+module file_read;
+string filename,filename_read;
+integer trace_read;
+//bit debug;
+
+task read_file(string name);
+  int file,file1;
+  string line;
+typedef struct packed {
+logic [31:0] time_CPU_clock_cycles;
+logic [3:0] core;
+logic [1:0] operation;
+logic [34:0] address;
+} input_data;
+input_data i;
+ 
+file=$fopen(name,"r");
+    if(file==0)
+begin
+      $display("Error: Failed to open file %s", name);
+      $finish;
+end
+
+  while(!$feof(file))
+begin
+    //void'($fgets(line,file));
+trace_read = $fscanf (file, "%0d %0d %0d %h\n", i.time_CPU_clock_cycles, i.core, i.operation, i.address);
+/*if(debug)
+begin        
+$display("CPU_clock_cycles= %0d Core=%0d operation=%0d address=%h", i.time_CPU_clock_cycles, i.core, i.operation, i.address);      
+end*/
+`ifndef DEBUG
+   $display("CPU_clock_cycles= %0d Core=%0d operation=%0d address=%h", i.time_CPU_clock_cycles, i.core, i.operation, i.address);
+`endif
+file1=$fopen("output.txt","a");
+$fwrite(file1, "CPU_clock_cycles= %0d Core=%0d operation=%0d address=%h\n", i.time_CPU_clock_cycles, i.core, i.operation, i.address);  
+       
+end
+$fclose(file);
+$fclose(file1);
+endtask
+
+initial
+begin
+if ($value$plusargs("filename=%s", filename_read))
+begin
+   filename = filename_read;
+end
+else begin
+   filename = "trace.txt";
+end
+
+/* if ($value$plusargs("debug=%d", debug))
+begin
+        $display("Debug mode is %0d", debug);
+end
+else
+begin
+          debug = 0;
+      end
+*/
+      read_file(filename);
+end
+endmodule

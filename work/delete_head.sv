@@ -1,0 +1,107 @@
+module fileread ;
+
+string filename;
+bit debug;
+
+    typedef struct packed {
+        logic [31:0] time_CPU_clock_cycles;
+        logic [3:0] core;
+        logic [1:0] operation;
+        logic [35:0] physical_address;
+        // Fields for topological mapping
+        bit [33:18] row;
+        bit [17:12] col_high;
+        bit [11:10] bank;
+        bit [9:7] bank_group;
+        bit channel;
+        logic [5:2] col_low;
+        logic [1:0] byte_sel;
+        int age; // Age of the request
+        int status; // Status of the request, e.g., 0 for pending, 1 for processed
+    } mem_request_t;
+
+    mem_request_t request_queue[$];
+    localparam int MAX_QUEUE_SIZE = 16;
+    int simulation_time = 0;
+
+    // Function to map address to topological components
+    function void map_address_to_topological(input logic [35:0] physical_address, inout mem_request_t req);
+        req.byte_sel = physical_address[1:0];
+        req.col_low = physical_address[5:2];
+        req.channel = physical_address[6];
+        req.bank_group = physical_address[9:7];
+        req.bank = physical_address[11:10];
+        req.col_high = physical_address[17:12];
+        req.row = physical_address[33:18];
+    endfunction
+
+    // Function to insert a request into the queue
+    function void insert_request(mem_request_t req);
+        if (request_queue.size() < MAX_QUEUE_SIZE) begin
+            request_queue.push_back(req);
+	    if(request_queue.size() == MAX_QUEUE_SIZE) begin
+               remove_from_queue();
+            end
+            if (debug) begin
+                $display("Inserted request at time %0d", simulation_time);
+                //print_queue_contents();  // Print queue contents after insertion
+            end
+        end else begin
+            $display("Queue is full. Cannot enqueue new request.");
+        end
+    endfunction
+
+    // Task to remove element from head of queue
+    task automatic remove_from_queue();
+        mem_request_t temp;
+        if (request_queue.empty()) begin
+            $display("Queue is empty");
+        end else begin
+            temp = request_queue.pop_front();
+        end
+    endtask
+
+    // Task to read and process requests
+    task read_and_process_requests(string filename);
+        int file;
+        mem_request_t req;
+
+        file = $fopen(filename, "r");
+        if (file == 0) begin
+            $display("Error: Failed to open file %s", filename);
+            $finish;
+        end
+
+        while (!$feof(file)) begin
+            $fscanf(file, "%0d %0d %0d %h", req.time_CPU_clock_cycles, req.core, req.operation, req.physical_address);
+            map_address_to_topological(req.physical_address, req);
+            
+            // Process request based on simulation time
+            if (req.time_CPU_clock_cycles <= simulation_time) begin
+                insert_request(req);
+                $display("%d", request_queue[0].byte_sel);
+                req.status = 0; // Assuming 0 means pending
+            end
+
+            simulation_time++; // Increment simulation time	    
+        end
+
+        $fclose(file);
+    endtask
+
+    // Initial block
+    initial begin
+        if ($value$plusargs("debug=%d", debug)) begin
+            $display("Debug mode is %d", debug);
+        end
+
+        if (!$value$plusargs("filename=%s", filename)) begin
+            filename = "trace.txt";
+        end
+
+        read_and_process_requests(filename);
+
+        // Test the remove_from_queue task
+        //remove_from_queue();
+    end
+endmodule
