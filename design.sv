@@ -1,19 +1,8 @@
-package PackageA;
 
 import Declarations1::*;
 import Definitions1::*;
 
-
-
-
-endpackage
-
-
-import PackageA::*;
-import Declarations1::*;
-import Definitions1::*;
-
-module DRAM_Commands1;
+module DRAM_Commands;
 
 // input for test
 initial begin
@@ -22,7 +11,7 @@ clock = 2;
 queue_in[0].in_data.time_CPU_clock_cycles = 20;
 queue_in[0].in_data.core = 1;
 queue_in[0].in_data.operation = 2;
-queue_in[0].in_data.address = 'h12345678;
+queue_in[0].in_data.address = 'h12345638;
 $display("done = %b, clock = %b, input file %p", done, clock, queue_in[0].in_data);
 address_mapping(queue_in[0].in_data.address, queue_in[0].add_mapped);
 end
@@ -68,18 +57,4 @@ end : while_done
 
 end : initial_blk
 
-endmodule
-
-// Local Testbench 
-module tb;
-
-import PackageA::*;
-
-
-initial begin
-queue_in[0].in_data.time_CPU_clock_cycles = 20;
-queue_in[0].in_data.core = 1;
-queue_in[0].in_data.operation = 2;
-queue_in[0].in_data.address = 'h12345678;
-end
 endmodule

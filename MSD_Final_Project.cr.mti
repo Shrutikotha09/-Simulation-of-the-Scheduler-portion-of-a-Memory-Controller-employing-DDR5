@@ -5,4 +5,19 @@ QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
 Top level modules:
 	file_read
 
+} {} {}} N:/MSD_Final_Project/Definitions1.sv {1 {vlog -work work -vopt -sv -stats=none N:/MSD_Final_Project/Definitions1.sv
+QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+-- Compiling package Definitions1
+-- Importing package Declarations1
+
+Top level modules:
+	--none--
+
+} {} {}} N:/MSD_Final_Project/Declarations1.sv {1 {vlog -work work -vopt -sv -stats=none N:/MSD_Final_Project/Declarations1.sv
+QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+-- Compiling package Declarations1
+
+Top level modules:
+	--none--
+
 } {} {}}
