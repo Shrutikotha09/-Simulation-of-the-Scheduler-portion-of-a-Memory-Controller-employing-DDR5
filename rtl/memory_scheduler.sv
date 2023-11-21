@@ -19,11 +19,12 @@ initial begin
 
 
         if (debug) begin
-            $display("Final Queue Contents at time %0d", simulation_time);
+            $display("Final Queue Contents at time %0d", clock);
             print_queue_contents();
         end
     end
 
+/*
 initial
 begin : initial_blk
 
@@ -68,5 +69,5 @@ end : set_done
 end : while_done
 
 end : initial_blk
-
+*/
 endmodule

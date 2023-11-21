@@ -2,7 +2,7 @@ package Definitions2;
 
 import Declarations2::*;
 import Declarations1::*;
-   
+import Definitions1::*;  
 
 // Function to map address to topological components
     function void map_address_to_topological(input logic [35:0] address, inout mem_request_t req);
@@ -43,7 +43,7 @@ import Declarations1::*;
 
     // Task to read and process requests
     task read_and_process_requests(string filename);
-        int file;
+
         mem_request_t req;
         automatic int max_time_in_file = 0;
         automatic bit request_pending = 0; // Indicates if a request is pending to be added to the queue
@@ -63,7 +63,10 @@ import Declarations1::*;
 
         //clock = 0;
 
-        while (request_pending || !$feof(file) || request_queue.size() > 0) begin
+while (!done)
+begin : while_done
+
+  if (request_pending || !$feof(file) || request_queue.size() > 0) begin
             if (request_pending && req.time_CPU_clock_cycles <= clock) begin
                 push_request(req);
                 request_pending = 0; // Reset flag as the request is now in the queue
@@ -79,6 +82,51 @@ import Declarations1::*;
             //clock++; // Increment simulation time
         end
 
+
+
+
+clock++;
+if(request_queue.size() > 0)
+begin
+
+queue_row = request_queue[0]; //queue_in[0];
+$display(" queue_row %p", queue_row );
+
+if(!(clock%2))
+begin : DIMM_clk
+$display(" DIMM Clock");
+
+// code added for checkpoint
+while(1)
+begin
+next_command (queue_row.curr_cmd, queue_row.in_data.operation, queue_row.row_col);
+out_file_upd(queue_row, clock);
+if(queue_row.curr_cmd == PRE) begin
+remove_from_queue ();
+break;
+end
+end
+//End of CP code 
+
+
+
+end : DIMM_clk
+
+else
+begin : else_DIMM_clock
+$display("else  DIMM Clock");
+end : else_DIMM_clock
+end
+$display(" eof status %b", $feof(file));
+// Add code for setting done to exit loop
+if(request_queue.size() == 0 && $feof(file))
+begin : set_done
+done = 1;
+end : set_done
+//
+end : while_done
+
+      
         $fclose(file);
         if (debug) begin
             $display("End of simulation at time %0d", clock);

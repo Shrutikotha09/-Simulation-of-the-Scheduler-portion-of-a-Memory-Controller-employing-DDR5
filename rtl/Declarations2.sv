@@ -1,7 +1,10 @@
 package Declarations2;
 
+import Declarations::*;
+
 string filename;
 int debug;
+int file;
 
  typedef struct packed {
         int time_CPU_clock_cycles;
@@ -16,6 +19,8 @@ int debug;
         logic channel;
         logic [5:2] col_low;
         logic [1:0] byte_sel;
+	commands curr_cmd;
+		logic row_col;
         int age; // Age of the request
         int status; // Status of the request
     } mem_request_t;
