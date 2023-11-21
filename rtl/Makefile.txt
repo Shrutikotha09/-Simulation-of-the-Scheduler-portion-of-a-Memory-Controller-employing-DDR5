@@ -1,0 +1,7 @@
+vlog Declarations1.sv
+vlog Declarations2.sv
+vlog Definitions1.sv
+vlog Definitions2.sv
+vlog memory_scheduler.sv
+vsim -c -do "run -all; quit -force" +filename=Input_trace_file.txt +debug=1 memory_scheuler
+gvim dram.txt
