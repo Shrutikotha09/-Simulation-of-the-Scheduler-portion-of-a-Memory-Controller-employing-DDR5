@@ -1,10 +1,354 @@
 m255
 K4
 z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11f vlog 2023.3 2023.07, Jul 17 2023
 13
 !s112 1.1
 !i10d 8192
 !i10e 25
 !i10f 100
 cModel Technology
-dN:/ASIC/work
+Z1 dN:/ASIC/work
+XDeclarations
+Z2 2N:/MSD_Final_Project/Declarations1.sv
+Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1700459471
+!i10b 1
+!s100 >e]O:SVGSiK?7PXdMMj8;1
+IdjXfFfWH1]Xf2`kFSM1jB0
+S1
+Z4 dN:/MSD_Final_Project
+w1700459263
+Z5 8N:/MSD_Final_Project/Declarations1.sv
+Z6 FN:/MSD_Final_Project/Declarations1.sv
+!i122 83
+Z7 L0 1 0
+VdjXfFfWH1]Xf2`kFSM1jB0
+Z8 OL;L;2023.3;77
+r1
+!s85 0
+31
+!s108 1700459471.000000
+Z9 !s107 N:/MSD_Final_Project/Declarations1.sv|
+Z10 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|N:/MSD_Final_Project/Declarations1.sv|
+!i113 0
+Z11 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z12 tCvgOpt 0
+n@declarations
+XDeclarations1
+R2
+R3
+Z13 !s110 1700459924
+!i10b 1
+!s100 `1@EJLnA`HNofP>T[;8jW3
+I1gWdb9XzJ6Io2^h7GnH2E0
+S1
+R4
+w1700459495
+R5
+R6
+!i122 121
+R7
+V1gWdb9XzJ6Io2^h7GnH2E0
+R8
+r1
+!s85 0
+31
+Z14 !s108 1700459923.000000
+R9
+R10
+!i113 0
+R11
+R12
+n@declarations1
+XDefinitions1
+2N:/MSD_Final_Project/Definitions1.sv
+R3
+Z15 DXx4 work 13 Declarations1 0 22 1gWdb9XzJ6Io2^h7GnH2E0
+R13
+!i10b 1
+!s100 dWaAc=O5YagdjR7clPaZL0
+IFOS25C86k8cANQKVViH`53
+S1
+R4
+w1700459765
+8N:/MSD_Final_Project/Definitions1.sv
+FN:/MSD_Final_Project/Definitions1.sv
+!i122 122
+L0 3 0
+VFOS25C86k8cANQKVViH`53
+R8
+r1
+!s85 0
+31
+Z16 !s108 1700459924.000000
+!s107 N:/MSD_Final_Project/Definitions1.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|N:/MSD_Final_Project/Definitions1.sv|
+!i113 0
+R11
+R12
+n@definitions1
+Xdesign_sv_unit
+Z17 2N:/MSD_Final_Project/design.sv
+R3
+R15
+Z18 DXx4 work 12 Definitions1 0 22 FOS25C86k8cANQKVViH`53
+R13
+VO97d9G2]IH7nb8[oO[D233
+r1
+!s85 0
+!i10b 1
+!s100 8`:b?<]?hlckg`]MC7Pec1
+IO97d9G2]IH7nb8[oO[D233
+!i103 1
+S1
+R4
+Z19 w1700459883
+Z20 8N:/MSD_Final_Project/design.sv
+Z21 FN:/MSD_Final_Project/design.sv
+!i122 123
+L0 2 0
+R8
+31
+R16
+Z22 !s107 N:/MSD_Final_Project/design.sv|
+Z23 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|N:/MSD_Final_Project/design.sv|
+!i113 0
+R11
+R12
+vDRAM_Commands
+R17
+R3
+R15
+R18
+DXx4 work 14 design_sv_unit 0 22 O97d9G2]IH7nb8[oO[D233
+R13
+Z24 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+!i10b 1
+!s100 lWIf4M8:38?4AdJd`WeSi1
+Ia?J44T@e=9P]aOC10lCma2
+!s105 design_sv_unit
+S1
+R4
+R19
+R20
+R21
+!i122 123
+L0 5 56
+R8
+31
+R16
+R22
+R23
+!i113 0
+R11
+R12
+n@d@r@a@m_@commands
+vDRAM_Commands1
+Z25 2N:/MSD_Final_Project/PackageA.sv
+R3
+R15
+R18
+Z26 DXx4 work 8 PackageA 0 22 VC^GDY`::Q<Q?9;29HQWL0
+Z27 DXx4 work 16 PackageA_sv_unit 0 22 FVTE3DPdel=KS`LGR[44Y3
+Z28 !s110 1700459923
+R24
+r1
+!s85 0
+!i10b 1
+!s100 Y>1aV6Hjkk2Z9OI=@kQ5b0
+ITU@IAJ<0lgJnE3ZE;PZ:J3
+Z29 !s105 PackageA_sv_unit
+S1
+R4
+Z30 w1700459920
+Z31 8N:/MSD_Final_Project/PackageA.sv
+Z32 FN:/MSD_Final_Project/PackageA.sv
+!i122 119
+L0 16 56
+R8
+31
+R14
+Z33 !s107 N:/MSD_Final_Project/PackageA.sv|
+Z34 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|N:/MSD_Final_Project/PackageA.sv|
+!i113 0
+R11
+R12
+n@d@r@a@m_@commands1
+TDRAM_Commands_opt
+!s110 1700459931
+V@=WT2bDTBV4a@Pk]?6<R62
+04 13 4 work DRAM_Commands fast 0
+R0
+Z35 !s12b OEM100
+Z36 !s124 OEM100
+Z37 o+acc
+R12
+n@d@r@a@m_@commands_opt
+Z38 OL;O;2023.3;77
+vfile_read
+2N:/MSD_Final_Project/test.sv
+R3
+R28
+!i10b 1
+!s100 Q?AOgz@Wc2]FCc8IaQlnh2
+IAf3A=2WdUCDZ5>@Yaz[6M1
+S1
+R4
+w1700338128
+8N:/MSD_Final_Project/test.sv
+FN:/MSD_Final_Project/test.sv
+!i122 120
+L0 1 55
+R24
+R8
+r1
+!s85 0
+31
+R14
+!s107 N:/MSD_Final_Project/test.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|N:/MSD_Final_Project/test.sv|
+!i113 0
+R11
+R12
+XPackageA
+R25
+R3
+R15
+R18
+R28
+!i10b 1
+!s100 TT9ofk01@g3ZmfA;4R5DP3
+IVC^GDY`::Q<Q?9;29HQWL0
+S1
+R4
+R30
+R31
+R32
+!i122 119
+R7
+VVC^GDY`::Q<Q?9;29HQWL0
+R8
+r1
+!s85 0
+31
+R14
+R33
+R34
+!i113 0
+R11
+R12
+n@package@a
+XPackageA_sv_unit
+R25
+R3
+R15
+R18
+R26
+R28
+VFVTE3DPdel=KS`LGR[44Y3
+r1
+!s85 0
+!i10b 1
+!s100 U5H:SFUi7>i=QB;eOMI_z0
+IFVTE3DPdel=KS`LGR[44Y3
+!i103 1
+S1
+R4
+R30
+R31
+R32
+!i122 119
+L0 12 0
+R8
+31
+R14
+R33
+R34
+!i113 0
+R11
+R12
+n@package@a_sv_unit
+vtb
+R25
+R3
+R15
+R18
+R26
+R27
+R28
+R24
+r1
+!s85 0
+!i10b 1
+!s100 HlT]BQ37Bm[KA2oIXmC4X1
+IfT6EFHOajdkW[2_GRXHZ;2
+R29
+S1
+R4
+R30
+R31
+R32
+!i122 119
+L0 74 12
+R8
+31
+R14
+R33
+R34
+!i113 0
+R11
+R12
+Ttb_opt
+!s110 1700355494
+VMBV`_l>oGAhAl?=7=ZRgW3
+04 2 4 work tb fast 0
+R0
+R35
+R36
+R37
+R12
+ntb_opt
+R38
+R1
