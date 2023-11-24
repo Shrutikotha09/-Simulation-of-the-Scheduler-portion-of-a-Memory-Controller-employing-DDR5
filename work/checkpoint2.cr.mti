@@ -1,1 +1,69 @@
+N:/MSD_Final_Project/work/Declarations1.sv {1 {vlog -work work -vopt -sv -stats=none N:/MSD_Final_Project/work/Declarations1.sv
+QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+-- Compiling package Declarations1
 
+Top level modules:
+	--none--
+
+} {} {}} N:/MSD_Final_Project/work/Definitions2.sv {1 {vlog -work work -vopt -sv -stats=none N:/MSD_Final_Project/work/Definitions2.sv
+QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+-- Compiling package Definitions2
+-- Importing package Declarations2
+-- Importing package Declarations1
+-- Importing package Definitions1
+
+Top level modules:
+	--none--
+
+} {} {}} N:/MSD_Final_Project/work/Declarations2.sv {1 {vlog -work work -vopt -sv -stats=none N:/MSD_Final_Project/work/Declarations2.sv
+QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+-- Compiling package Declarations2
+-- Importing package Declarations1
+
+Top level modules:
+	--none--
+
+} {} {}} N:/MSD_Final_Project/work/memory_scheduler.sv {1 {vlog -work work -vopt -sv -stats=none N:/MSD_Final_Project/work/memory_scheduler.sv
+QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+-- Compiling module memory_scheuler
+-- Importing package Definitions2
+-- Importing package Declarations2
+-- Importing package Declarations1
+-- Importing package Definitions1
+
+Top level modules:
+	memory_scheuler
+
+} {} {}} N:/MSD_Final_Project/work/delete_head.sv {2 {vlog -work work -vopt -sv -stats=none N:/MSD_Final_Project/work/delete_head.sv
+QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+-- Compiling module fileread
+** Warning: N:/MSD_Final_Project/work/delete_head.sv(43): (vlog-2875) Task "remove_from_queue" is being called in function "insert_request".
+
+Top level modules:
+	fileread
+
+} {} {}} N:/MSD_Final_Project/work/test.sv {1 {vlog -work work -vopt -sv -stats=none N:/MSD_Final_Project/work/test.sv
+QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+-- Compiling module file_read
+
+Top level modules:
+	file_read
+
+} {} {}} N:/MSD_Final_Project/work/Definitions1.sv {2 {vlog -work work -vopt -sv -stats=none N:/MSD_Final_Project/work/Definitions1.sv
+QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+-- Compiling package Definitions1
+-- Importing package Declarations1
+-- Importing package Declarations2
+** Warning: N:/MSD_Final_Project/work/Definitions1.sv(54): (vlog-2240) Treating stand-alone use of function 'pop_front' as an implicit VOID cast.
+
+Top level modules:
+	--none--
+
+} {} {}} N:/MSD_Final_Project/work/remove_from_queue.sv {1 {vlog -work work -vopt -sv -stats=none N:/MSD_Final_Project/work/remove_from_queue.sv
+QuestaSim-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+-- Compiling module test
+
+Top level modules:
+	test
+
+} {} {}}

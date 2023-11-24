@@ -18,3 +18,13 @@ CPU_clock_cycles= 23103 Core=5 operation=2 address=3ffd6dac7
 CPU_clock_cycles= 432344 Core=10 operation=2 address=000dc1303
 CPU_clock_cycles= 656555 Core=5 operation=1 address=00010c200
 CPU_clock_cycles= 1000000 Core=1 operation=0 address=21b742547
+CPU_clock_cycles= 353 Core=7 operation=2 address=003fd6680
+CPU_clock_cycles= 434 Core=9 operation=1 address=00016a000
+CPU_clock_cycles= 835 Core=9 operation=2 address=000817084
+CPU_clock_cycles= 955 Core=1 operation=0 address=005042cc9
+CPU_clock_cycles= 1260 Core=8 operation=0 address=00012054a
+CPU_clock_cycles= 1988 Core=2 operation=1 address=054ecc64e
+CPU_clock_cycles= 23103 Core=5 operation=2 address=3ffd6dac7
+CPU_clock_cycles= 432344 Core=10 operation=2 address=000dc1303
+CPU_clock_cycles= 656555 Core=5 operation=1 address=00010c200
+CPU_clock_cycles= 1000000 Core=1 operation=0 address=21b742547
